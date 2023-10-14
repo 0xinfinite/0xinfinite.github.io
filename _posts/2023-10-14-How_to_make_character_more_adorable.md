@@ -8,7 +8,7 @@ title: 더 나은 방식으로 서브컬쳐 3D모델 렌더하기
 
 이 글은 유니티 셰이더 및 스크립트 뿐만 아니라, 3D 모델 작성부터 시작해서 리깅 등 더 나은 룩스와 작업효율화를 위해 어떤 결정을 했는지 차례대로 기술하고 있습니다.
 
-프로젝트는 깃허브에 커밋하고 있으므로 같이 보시면 좋습니다만 소제목이 하이라이트 되어있으면 그걸 누르셔도 관련된 스크립트를 열람하실 수 있습니다. (https://github.com/0xinfinite/ProjectProxy)
+프로젝트는 [깃허브](https://github.com/0xinfinite/ProjectProxy)에 커밋하고 있으므로 같이 보시면 좋습니다만 소제목이 하이라이트 되어있으면 그걸 누르셔도 관련된 스크립트를 열람하실 수 있습니다. 
 
 
 ## 만들고자 하는 캐릭터
@@ -27,7 +27,7 @@ title: 더 나은 방식으로 서브컬쳐 3D모델 렌더하기
 
 ## 결과물
 
-모델링은 https://twitter.com/Mootonashi/ 혹은 [유튜브채널](https://www.youtube.com/channel/UCa1IDNZciAUD-EPeFb5yVnQ)에서 감상하실 수 있습니다 ;)
+모델링은 [https://twitter.com/Mootonashi/](https://twitter.com/Mootonashi/) 혹은 [유튜브채널](https://www.youtube.com/channel/UCa1IDNZciAUD-EPeFb5yVnQ)에서 감상하실 수 있습니다 ;)
 
 <iframe width="338" height="600" src="https://www.youtube.com/embed/UqCAhVqLBXc?si=rnOf3dps_wlWSkei&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -256,7 +256,7 @@ Blendshape를 이용하여 버텍스를 옮기면, Unity는 옮겨진 버텍스�
 2. "Skinned mesh renderer"를 비활성화하고 일반 "Mesh renderer"를 활성화한다
 3. 복제된 매시를 본에 따라 변형하고, 원하는 기능(지금의 경우, 노말을 변형 전의 것으로 유지)과 함께 렌더한다.
 
-스크립트를 구현하는 과정에서 어려움을 겪은 저는 유니티 포럼에 도움을 요청, 힌트를 얻어 각 본의 localToWorldMatrix를 바인드포즈와 곱해야한다는 사실을 알았습니다.([https://forum.unity.com/threads/having-trouble-with-reproduce-skinned-mesh-renderer-manually.1499333/](https://forum.unity.com/threads/having-trouble-with-reproduce-skinned-mesh-renderer-manually.1499333/))
+스크립트를 구현하는 과정에서 어려움을 겪은 저는 [유니티 포럼](https://forum.unity.com/threads/having-trouble-with-reproduce-skinned-mesh-renderer-manually.1499333/)에 도움을 요청, 힌트를 얻어 각 본의 localToWorldMatrix를 바인드포즈와 곱해야한다는 사실을 알았습니다.
 
 그리하여 구현한 코드는 다음과 같습니다.
 
