@@ -9,6 +9,7 @@ title: 더 나은 방식으로 서브컬쳐 3D모델 렌더하기
 프로젝트는 깃허브에 커밋하고 있으므로 같이 보시면 좋습니다만 소제목이 하이라이트 되어있으면 그걸 누르셔도 관련된 스크립트를 열람하실 수 있습니다. (https://github.com/0xinfinite/ProjectProxy)
 
 ## 만들고자 하는 캐릭터
+
 <img src="https://imas.gamedbs.jp/cgss/images/i0kZ1jrqafsqaIn0rToUR23L0c0xW-X-dD-bzZ0hFWs.jpg">
 
 저는 아이돌마스터 신데렐라 걸즈의 등장 캐릭터 "모치다 아리사"를 3D모델로 작성하여 렌더하는 것을 목표로 삼았습니다.
@@ -16,6 +17,7 @@ title: 더 나은 방식으로 서브컬쳐 3D모델 렌더하기
 <img src="https://dere-ken.com/wp-content/uploads/2022/03/IMG_3707.png">
 
 이 캐릭터를 가장 최애하는 입장에서, 최근의 3D모델은 요즘 인기캐릭터의 유행 공식을 '일부러' 선택하지 않은 것 같아 유감스러웠습니다. 사이게임즈의 간판IP 우마무스메의 교복이나 같은 IP 인기캐릭터의 교복 테마 3D모델 의상에서 치마를 올려 입는 '하이웨이스트'로 일컫는 스타일을 채택한 데에 비해, 해당 모델의 의상은 상의가 너무 길어 다리가 짧아 보입니다.
+
 <img src="https://media.discordapp.net/attachments/1043064605972381697/1140232877238407168/image0.png?ex=6534fb9e&is=6522869e&hm=121a5b4e55f3ce587c03733358da5239461758f56d8803ed16e64c3aca8788c2&=&width=330&height=586">
 
 그러므로 저는 기존의 디자인에서 '하이웨이스트'를 반영하여 개선한 디자인의 3D모델을 만들어 유니티 상에 렌더하고자 했습니다.(위의 이미지는 지인에게 디자인 조언을 들으며 받은 그림입니다)
@@ -23,6 +25,7 @@ title: 더 나은 방식으로 서브컬쳐 3D모델 렌더하기
 ## 결과물
 
 모델링은 https://twitter.com/Mootonashi/ 혹은 [유튜브채널](https://www.youtube.com/channel/UCa1IDNZciAUD-EPeFb5yVnQ)에서 감상하실 수 있습니다 ;)
+
 <iframe width="338" height="600" src="https://www.youtube.com/embed/UqCAhVqLBXc?si=rnOf3dps_wlWSkei&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # 블렌더 모델링
@@ -106,6 +109,7 @@ Blender에서의 빠른 작업을 위해 Auto Rig Pro의 리그를 사용하여 
 	    angle = math.degrees(math.asin(right_dot))#right_vec.dot(mat.to_quaternion()@ mathutils.Vector((1.0,0.0,0.0)))
 	    return angle 
 이하의 영상은 세컨더리 본 움직임을 시연하는 블렌더 영상입니다.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5eD90udMwHE?si=SCs7uPGA7E3K1BY9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
@@ -221,6 +225,7 @@ Spot Light 등의 Additional Light의 경우, 픽셀의 월드 포지션을 빛�
 # 얼굴 Normals 제어하기
 
 ## 서론
+
 <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaBABhvYb4gTNCyd9uYLCVMPJ_fqohhQ3JOQMcB9aCsbEh7axfsDGPFpx-h9v8NaqOxxHlFmeAKn-8VBLRzLovGtvUIpSw=w1101-h832">
 
 카툰렌더링을 위해 만들어진 Shape은 그대로 셰이딩을 하면 굉장한 그림자를 만들어내기 때문에 얼굴에 그림자를 연출하기로 결정했으면 Normal Editing이 필수입니다.(Shader에서 얼굴 오브젝트와 vertex의 위치를 비교해서 가상 Normal을 계산하거나, 그림자를 위한 UV를 만들어내는 등의 다른 방법도 물론 있습니다.)
@@ -462,6 +467,7 @@ Blendshape를 이용하여 버텍스를 옮기면, Unity는 옮겨진 버텍스�
 
 
 아래 영상은 일반 Skinned mesh renderer와 Custom skinned mesh renderer를 비교시연하는 영상입니다.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HRp__ruzGXQ?si=XntuWlYV4mY7lsbh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 지금 스크립트는 매시의 모든 버텍스 위치를 for문 안에서 계산하지만, Job을 이용하면 다중 스레드 상에서 매시를 변형할 수 있을 것입니다...(작업중)
@@ -469,7 +475,9 @@ Blendshape를 이용하여 버텍스를 옮기면, Unity는 옮겨진 버텍스�
 # 외곽선
 
 ## 화두
+
 <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaCelr2oP8gDh_Srzx19DUpJ69fSFofvm4Kzm8aAWtZMFpZLxF0aLiyWxBs8w7ub8Fa3s5SerRAZlLWbELB4IFJsVsyqNQ=w1101-h832">
+
 카툰 렌더링에서 외곽선(2pass backface outline)을 렌더할때, 보통 얼굴 안에 코 이외의 외곽선이 생기지 않는 것을 희망할겁니다.
 
 얼굴 안에 외곽선이 생기지않게 하는 기술적으로 가장 간단한 방법은 Shape에 고저차가 생기지 않도록 수동으로 버텍스를 미세조정하는 것입니다.
@@ -503,6 +511,7 @@ Stencil로 마스킹을 하면 앞서 서술한 모든 버텍스를 모든 각�
 단점은 4pass를 쓴다는 점이지만... URP에서는 Renderer Features에서 특정한 레이어의 오브젝트만 선택적으로 렌더하는 옵션이 있기 때문에 얼굴 오브젝트만 마스킹 렌더가 되도록 레이어를 구분한다면 큰 부하는 없으리라 생각합니다.
 
 다음은 일반적인 2pass외곽선(좌)과 제가 구현한 외곽선(우)을 비교한 이미지입니다.
+
 <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaBnO-gc2jVoRHzsAiLJgDRvIi59o95-24KYMRFgZPcwDTVCGkfzeHwVvCmIcZVg0xtbSshMqJ9tx6dQMQy6tNP4GcT7SQ=w1101-h832">
 
   
@@ -533,7 +542,7 @@ SyncTransform() 함수를 호출하는 것으로 커스텀 스크립트가 적�
     
 다음은 히에라키 상에서 부모로 연결되어있지 않아도 부모처럼 취급되는 한 쌍의 오브젝트를 시연하는 동영상입니다.
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/v-nE2aIyzr0?si=Dsv9ttr05F8y1DqT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v-nE2aIyzr0?si=Dsv9ttr05F8y1DqT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## [Virtual Axis Transform](https://github.com/0xinfinite/ProjectProxy/blob/main/Assets/Scripts/Matrix/VirtualAxisTransformController.cs)
 
