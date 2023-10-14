@@ -2,6 +2,7 @@
 layout: post
 title: 더 나은 방식으로 서브컬쳐 3D모델 렌더하기
 ---
+
 # 더 나은 방식으로 서브컬쳐 3D모델 렌더하기
 
 안녕하세요, 이 글에서는 소위 '카툰 렌더링'으로 대표되는 서브컬쳐를 타겟으로 한 3D모델을 렌더하기 위해 어떤 기술을 사용했는지를 기술하고자 합니다.
@@ -30,6 +31,8 @@ title: 더 나은 방식으로 서브컬쳐 3D모델 렌더하기
 모델링은 [https://twitter.com/Mootonashi/](https://twitter.com/Mootonashi/) 혹은 [유튜브채널](https://www.youtube.com/channel/UCa1IDNZciAUD-EPeFb5yVnQ)에서 감상하실 수 있습니다 ;)
 
 <iframe width="338" height="600" src="https://www.youtube.com/embed/UqCAhVqLBXc?si=rnOf3dps_wlWSkei&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 
 # 블렌더 모델링
 
@@ -114,6 +117,7 @@ Blender에서의 빠른 작업을 위해 Auto Rig Pro의 리그를 사용하여 
 이하의 영상은 세컨더리 본 움직임을 시연하는 블렌더 영상입니다.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5eD90udMwHE?si=SCs7uPGA7E3K1BY9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 
 # 셰이딩
@@ -225,6 +229,7 @@ Spot Light 등의 Additional Light의 경우, 픽셀의 월드 포지션을 빛�
 	    return light;
 	}
    
+
 
 # 얼굴 Normals 제어하기
 
@@ -476,6 +481,8 @@ Blendshape를 이용하여 버텍스를 옮기면, Unity는 옮겨진 버텍스�
 
 지금 스크립트는 매시의 모든 버텍스 위치를 for문 안에서 계산하지만, Job을 이용하면 다중 스레드 상에서 매시를 변형할 수 있을 것입니다...(작업중)
 
+
+
 # 외곽선
 
 ## 화두
@@ -518,6 +525,7 @@ Stencil로 마스킹을 하면 앞서 서술한 모든 버텍스를 모든 각�
 다음은 일반적인 2pass외곽선(좌)과 제가 구현한 외곽선(우)을 비교한 이미지입니다.
 
 <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaBnO-gc2jVoRHzsAiLJgDRvIi59o95-24KYMRFgZPcwDTVCGkfzeHwVvCmIcZVg0xtbSshMqJ9tx6dQMQy6tNP4GcT7SQ=w1101-h832">
+
 
   
 # Unity에서 세컨더리 본 제어하기
@@ -563,6 +571,8 @@ FlexibleTransform 인스턴스는 자식 트랜스폼과 부모의 매트릭스�
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Vc3rkIDaVZI?si=FE-RySELTz8rCFXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+
+
 ## 머리카락보다 앞에 있는 눈썹
 
 눈썹은 마테리얼을 분리해서 얼굴과 단 한가지를 제외한 나머지 변수를 공유하는 재질을 적용했습니다.
@@ -599,6 +609,7 @@ FlexibleTransform 인스턴스는 자식 트랜스폼과 부모의 매트릭스�
 다음 이미지는 적용 전과 후를 비교한 것입니다.
 
 <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDDiPJyaxarZQZT7UKAauosepef4nGj2NLnssrMRXTiL1wUvQcOH8lLQWd_-SzL3-ByKErCuH4gv7ozwR_i1MpqRL5T=w1101-h832">
+
 
 
 # WIP
