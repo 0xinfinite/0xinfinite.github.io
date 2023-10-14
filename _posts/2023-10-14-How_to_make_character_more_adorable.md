@@ -118,6 +118,8 @@ Blender에서의 빠른 작업을 위해 Auto Rig Pro의 리그를 사용하여 
 	    right_dot = (parent_quat @ left).normalized().dot((bone_quat @ forward).normalized())
 	    angle = math.degrees(math.asin(right_dot))#right_vec.dot(mat.to_quaternion()@ mathutils.Vector((1.0,0.0,0.0)))
 	    return angle 
+
+
 이하의 영상은 세컨더리 본 움직임을 시연하는 블렌더 영상입니다.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5eD90udMwHE?si=SCs7uPGA7E3K1BY9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
