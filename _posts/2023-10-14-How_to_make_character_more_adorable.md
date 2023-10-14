@@ -598,7 +598,7 @@ FlexibleTransform 인스턴스는 자식 트랜스폼과 부모의 매트릭스�
 
 # WIP
 
-프로젝트는 계속해서 진행, 기능 추가 중입니다!
+프로젝트는 계속해서 진행, 기능 추가 중입니다.
 
 ## TODO
 - Custom Skinned Mesh Renderer 다중스레드 화
