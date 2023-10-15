@@ -288,15 +288,23 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
         Shader.SetGlobalMatrix(mainCharacterShadowMatrixId, MatrixConversion.GetVP(cam));
     }
 
-    public static class MatrixConversion
+    public static Matrix4x4 GetVP(Camera cam)
     {
-        public static Matrix4x4 GetProjectionMatrix(Camera cam)
-        {
-            return (!cam.orthographic? 
-                cam.projectionMatrix :
-                GL.GetGPUProjectionMatrix(cam.projectionMatrix,false))* cam.worldToCameraMatrix;
+        bool d3d = SystemInfo.graphicsDeviceVersion.IndexOf("Direct3D") > -1;
+        
+        Matrix4x4 V = cam.worldToCameraMatrix;
+        Matrix4x4 P = cam.projectionMatrix;
+        if (d3d) {
+            // Invert Y for rendering to a render texture
+            for (int i = 0; i < 4; i++) {
+                P[1,i] = -P[1,i];
+            }
+            // Scale and bias from OpenGL -> D3D depth range
+            for (int i = 0; i < 4; i++) {
+                P[2,i] = P[2,i]*0.5f + P[3,i]*0.5f;
+            }
         }
-        ...
+        return P * V;
     }
 
  
