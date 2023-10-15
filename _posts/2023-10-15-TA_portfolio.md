@@ -100,7 +100,7 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 
 Normals을 Transfer해도 Blendshape를 주면 노말이 다시 계산되어 이상한 그림자가 지게 됨
 
-
+<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaClM-kya7u8-XMIxmcNQjfRS_c1VqmfAme5k4xQm4irH0Ej0sa1RH6hklSIRr_ti-c1FXFeCby512umb_ZyV6ydfjbV=w1619-h439">
 
 [Custom Skinned Mesh Renderer 스크립트](https://github.com/0xinfinite/ProjectProxy/blob/main/Assets/Scripts/Visuals/CustomSkinning/CustomSkinnedMeshRenderer.cs) 구현
 
