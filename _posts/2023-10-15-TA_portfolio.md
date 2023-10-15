@@ -198,7 +198,7 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 　
 ## 얼굴 안쪽의 외곽선 마스킹
 
-표정 변화를 위해 버텍스 애니메이션을 주니 메쉬가 접히면서 쓸모없는 외곽선을 셰이더와 스탠실로 지워보겠습니다.
+표정 변화를 위해 버텍스 애니메이션을 주니, 메쉬가 접히면서 쓸모없는 외곽선이 생겼습니다. 셰이더와 스탠실로 지워보겠습니다.
 
 <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaAqboqcDnysQA3KA2kdk9BnnL0-NUqWcIWPJeVtg9Kkz4jAX90x_9QfI4uxfewHmijAi-a4GNwvCUJG8ZGTu1ELUuOncQ=w1619-h439">
 
