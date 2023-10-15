@@ -298,7 +298,8 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
         }
         ...
     }
-　
+
+ 
 셰이더에서 뎁스맵과 프로젝션 상 픽셀 위치를 비교하여, 뎁스맵의 픽셀이 월드 픽셀보다 앞에 있으면 그림자에 가려진 것으로 처리함
 
     
@@ -398,7 +399,7 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 결과물 (일반 그림자맵 크기 512, 메인캐릭터용 뎁스맵 크기 256)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HUnKAt1f_8o?si=4ZrXmByY9snq2-Di&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vKQiodIhNc0?si=t8qpaEOkf6poIMwN&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 
