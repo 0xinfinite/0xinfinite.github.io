@@ -134,12 +134,11 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 
 매트릭스를 직접 계산하여 가상 부모 설정[(FlexibleTransform)](https://github.com/0xinfinite/ProjectProxy/blob/main/Assets/Scripts/Matrix/FlexibleTransformController.cs)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Vc3rkIDaVZI?si=FE-RySELTz8rCFXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v-nE2aIyzr0?si=Dsv9ttr05F8y1DqT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 [Secondary Bone Controller](https://github.com/0xinfinite/ProjectProxy/blob/main/Assets/Scripts/Rigging/SecondaryBones/SecondaryBoneController.cs/) 시연
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/v-nE2aIyzr0?si=Dsv9ttr05F8y1DqT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vc3rkIDaVZI?si=FE-RySELTz8rCFXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 　
 　
