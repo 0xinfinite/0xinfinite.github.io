@@ -202,7 +202,7 @@ RealtimeLights.hlsl를 수정하여 shadowCoord.z값을 offset만큼 가산, 얼
 　
 ## 게임엔진에서 세컨더리 본 제어
 
-Animation Clip가 아닌 직접 수족을 제어할 경우 세컨더리 본이 작동하지 않음
+Animation Clip가 아닌 게임엔진에서 직접 수족을 제어할 경우 세컨더리 본이 작동하지 않음
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/weaHy87mR-A?si=nsA5aeA3v9vhAais" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
