@@ -216,6 +216,43 @@ Animation Clip가 아닌 직접 수족을 제어할 경우 세컨더리 본이 �
 
 　
 　
+
+## 머리카락보다 앞에 있는 눈썹
+
+버텍스 월드위치를 뷰 디렉션 방향으로 offset만큼 이동
+
+	VertexPositionInputs GetVertexPositionInputs(float3 positionOS, float _depthForward)
+	{
+	    VertexPositionInputs input;
+	    input.positionWS = TransformObjectToWorld(positionOS);
+
+	    float3 viewDirection = GetWorldSpaceNormalizeViewDir(input.positionWS);//_WorldSpaceCameraPos.xyz - input.positionWS;
+
+	    input.positionWS += viewDirection * _depthForward;
+
+	    input.positionVS = TransformWorldToView(input.positionWS);
+	    input.positionCS = TransformWorldToHClip(input.positionWS);
+
+	    float4 ndc = input.positionCS * 0.5f;
+	    input.positionNDC.xy = float2(ndc.x, ndc.y * _ProjectionParams.x) + ndc.w;
+	    input.positionNDC.zw = input.positionCS.zw;
+
+	    return input;
+	}
+	Varyings LitPassVertex(Attributes input)
+	{
+		...
+		VertexPositionInputs vertexInput = GetVertexPositionInputs(input.positionOS.xyz, _DepthForward);
+		...
+	}
+
+적용 전과 적용 후 비교
+
+<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDDiPJyaxarZQZT7UKAauosepef4nGj2NLnssrMRXTiL1wUvQcOH8lLQWd_-SzL3-ByKErCuH4gv7ozwR_i1MpqRL5T=w1101-h832">
+
+
+　
+　
 ## 3D 모델링
 
 <img src="https://imas.gamedbs.jp/cgss/images/i0kZ1jrqafsqaIn0rToUR23L0c0xW-X-dD-bzZ0hFWs.jpg">
