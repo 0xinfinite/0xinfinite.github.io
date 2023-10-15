@@ -286,7 +286,17 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
     {
         Shader.SetGlobalTexture(mainCharacterShadowmapId, depthTex);
         Shader.SetGlobalMatrix(mainCharacterShadowMatrixId, MatrixConversion.GetVP(cam));
+    }
 
+    public static class MatrixConversion
+    {
+        public static Matrix4x4 GetProjectionMatrix(Camera cam)
+        {
+            return (!cam.orthographic? 
+                cam.projectionMatrix :
+                GL.GetGPUProjectionMatrix(cam.projectionMatrix,false))* cam.worldToCameraMatrix;
+        }
+        ...
     }
 　
 셰이더에서 뎁스맵과 프로젝션 상 픽셀 위치를 비교하여, 뎁스맵의 픽셀이 월드 픽셀보다 앞에 있으면 그림자에 가려진 것으로 처리함
