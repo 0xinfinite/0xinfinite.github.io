@@ -17,6 +17,8 @@ title: TA 포트폴리오
 
 [캐스트 쉐도우 제어](#Cast-Shadow-제어하기)
 
+[메인캐릭터 그림자](#배경에-더-선명한-캐릭터-그림자-드리우기)
+
 [눈썹 먼저 그리기](#머리카락보다-앞에-있는-눈썹)
 
 3. [모델링](#모델링)
@@ -250,8 +252,148 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 
 
+
+
+## 배경에 더 선명한 캐릭터 그림자 드리우기
+
+<img src="https://pbs.twimg.com/media/FOsiqh4aMAALqDn?format=png&name=small">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4660-3DJydA?si=rPnoM95YtkX9l1g_&amp;start=19" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+명일방주-엔드필드 시연 영상에서 영감을 얻어, 전체 그림자맵 용량을 아끼면서 캐릭터 그림자를 선명하게 띄우는 방법을 구상
+
+<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaCarlfJ2GyWcFveFYjbiuhVE9QyIMg0N-781wrTuXDsXPquPSr3YrQTJZOqVQCth2ZZ7SgjE7Wfcme84WH57LgAbF-AjQ=w970-h529">
+
+그림자맵은 카메라로 렌더한다는 것에 착안, 메인 캐릭터 위에 직선광과 똑같은 각도의 Orthographic 카메라를 배치
+
+카메라에 부착된 MainCharacterShadowCaster.cs는 셰이더에게 카메라 뷰프로젝션 매트릭스와 뎁스맵을 전송함
+
+    using UnityEngine;
+    using UnityEngine.Rendering;
+    
+    static int mainCharacterShadowmapId = Shader.PropertyToID("_MainCharacterShadowmap");
+    static int mainCharacterShadowMatrixId = Shader.PropertyToID("_MainCharacterMatrix");
+    
+    private RenderTexture depthTex;
+    private Camera cam;
+
+    void Awake()
+    {
+        cam = GetComponent<Camera>();
+        depthTex = cam.targetTexture;
+    }
+    private void LateUpdate()
+    {
+        Shader.SetGlobalTexture(mainCharacterShadowmapId, depthTex);
+        Shader.SetGlobalMatrix(mainCharacterShadowMatrixId, MatrixConversion.GetVP(cam));
+
+    }
 　
-　
+셰이더에서 뎁스맵과 프로젝션 상 픽셀 위치를 비교하여, 뎁스맵의 픽셀이 월드 픽셀보다 앞에 있으면 그림자에 가려진 것으로 처리함
+
+    
+<details>
+	<summary>셰이더 메인 캐릭터 그림자 처리 부분</summary>
+	<div markdown="1">
+	
+    	float4 ProjectUVFromWorldPos(float4x4 projection, float3 worldPos) {
+				float4 projVertex = mul(projection, float4(worldPos.x,worldPos.y, worldPos.z, 1) );
+				return ComputeScreenPos(projVertex);
+			}
+
+			float2 ProjectionUVToTex2DUV(float4 projUV) {
+				return projUV.xy / projUV.w;
+			}
+
+			bool ClipUVBoarder(float2 uv) {
+				if (uv.x < 0 || uv.x>1) return true;
+				if (uv.y < 0 || uv.y>1) return true;
+
+				return false;
+			}
+
+			bool ClipBackProjection(float4 projUV) {
+				if (projUV.z < 0) return true;
+				
+				return false;
+			}
+
+			float DepthFromDepthmap(Texture2D depthMap, sampler sampler_depthMap, float2 projectedUV, float bias) {
+				return SAMPLE_TEXTURE2D(depthMap, sampler_depthMap, projectedUV).r*bias;
+			}
+
+			float DepthFromDepthmap(Texture2D depthMap, sampler sampler_depthMap, float2 projectedUV) {
+				return SAMPLE_TEXTURE2D(depthMap, sampler_depthMap, projectedUV).r;
+			}
+
+			bool ClipProjectionShadow(float depthFromPos, float depthFromMap, float calculationOffset) {
+				if (depthFromPos - depthFromMap < calculationOffset) return true;
+
+				return false;
+			}
+    
+    TEXTURE2D(_MainCharacterShadowmap);
+    SAMPLER(sampler_MainCharacterShadowmap);
+    float4x4 _MainCharacterMatrix;
+    
+    
+    float3 MainCharacterLightShadow(float3 positionWS) {
+    
+        float4 projUV = ProjectUVFromWorldPos(_MainCharacterMatrix, positionWS);
+        float2 uv = ProjectionUVToTex2DUV(projUV);
+    
+        if (ClipUVBoarder(uv)) {
+            return -1;
+        }
+        if (ClipBackProjection(projUV)) {
+            return -1;
+        }
+    
+        float dfp = DepthFromProjection(projUV);
+        float dfd = DepthFromDepthmap(_MainCharacterShadowmap, sampler_MainCharacterShadowmap, projUV, 1);
+    
+        return float3(uv.x, uv.y ,1 - ClipProjectionShadow(dfp, dfd, -0.0001));
+    }
+    
+    Light GetMainLight(float3 positionWS, half4 shadowMask, float shadowCastOffset)
+    {
+        Light light = GetMainLight();
+    
+        float3 virtualWorldPos = positionWS + (light.direction * shadowCastOffset);
+    
+        float4 shadowCoord = TransformWorldToShadowCoord(virtualWorldPos);
+    
+        light.shadowAttenuation = MainLightShadow(shadowCoord, positionWS, shadowMask, _MainLightOcclusionProbes);
+    
+    #if defined(MAIN_CHARACTER_SHADOW_ON)
+        float3 detailShadow = MainCharacterLightShadow(virtualWorldPos);
+        if (detailShadow.z > -0.1) {
+    
+            light.shadowAttenuation = min(light.shadowAttenuation, detailShadow.z);
+          
+        }
+    #endif
+    
+        #if defined(_LIGHT_COOKIES)
+            real3 cookieColor = SampleMainLightCookie(positionWS);
+            light.color *= cookieColor;
+        #endif
+    
+        return light;
+    }
+
+
+</div>
+</details>
+
+결과물 (일반 그림자맵 512*512, 메인캐릭터용 뎁스맵 256*256)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HUnKAt1f_8o?si=4ZrXmByY9snq2-Di&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
+
+ 
 
 ## 머리카락보다 앞에 있는 눈썹
 
