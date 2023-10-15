@@ -154,7 +154,7 @@ Normals을 Transfer해도 Blendshape를 주면 노말이 다시 계산되어 이
 
 Blendshape에 의해 얼굴에 고저차가 생겨 쓸모없는 외곽선이 생긴 모습
 
-<img src="[https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaBnO-gc2jVoRHzsAiLJgDRvIi59o95-24KYMRFgZPcwDTVCGkfzeHwVvCmIcZVg0xtbSshMqJ9tx6dQMQy6tNP4GcT7SQ=w1101-h832](https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaAqboqcDnysQA3KA2kdk9BnnL0-NUqWcIWPJeVtg9Kkz4jAX90x_9QfI4uxfewHmijAi-a4GNwvCUJG8ZGTu1ELUuOncQ=w1619-h439)">
+<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaAqboqcDnysQA3KA2kdk9BnnL0-NUqWcIWPJeVtg9Kkz4jAX90x_9QfI4uxfewHmijAi-a4GNwvCUJG8ZGTu1ELUuOncQ=w1619-h439">
 
 Vertex Color를 이용
 R채널 : 항상 그려지는 외곽선 렌더(코, 얼굴 이외 외곽선)
