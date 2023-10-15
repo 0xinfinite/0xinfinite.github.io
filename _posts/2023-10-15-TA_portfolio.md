@@ -111,7 +111,7 @@ def left_angle(traj_bone,pose_bone,parent_bone):
     return angle 
 ```
 	
-	</div>
+</div>
 </details>
 
 
