@@ -3,13 +3,13 @@ layout: post
 title: TA 포트폴리오
 ---
 ## 목차
-1. 리깅
+1. [리깅](#-리깅)
 
   블렌더 세컨더리본
 
   유니티 세컨더리본
 
-2. 렌더링
+2. [렌더링](#-렌더링)
 
   노멀편집
 
@@ -17,7 +17,7 @@ title: TA 포트폴리오
 
   캐스트 쉐도우 제어
 
-3. 모델링
+3. [모델링](#-모델링)
 
   모치다 아리사 작업물
 
@@ -45,6 +45,8 @@ title: TA 포트폴리오
 ## 엉덩이 본
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3r_-p-pIkzQ?si=jLB9uV57aOFdTLkK&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 
 <details>
 	<summary>파이썬 스크립트 소스코드</summary>
@@ -123,6 +125,7 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 ## 게임엔진에서 세컨더리 본 제어
 
 -이러한 세컨더리 본은 맥스, 블렌더 등의 툴에서 키 값을 구워와야 하며, 유니티에서 움직이면 작동하지 않음.
+
 -그래서 유니티에서도 세컨더리 본이 블렌더에서 처럼 작동할 수 있도록 유니티 스크립트를 구현
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/weaHy87mR-A?si=nsA5aeA3v9vhAais" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -151,7 +154,7 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 
 <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaA7axUWnNAxiz3CTYkPsIZoVz7oo7KGZx5uOhu1kI99vngh9ey9eXzGhzEICVRwoslaFMUl3MvzqqtgyziyHB-R1eBG=w1200-h876">
 
-해당 문제를 해결하기 위해서 셰이더 스크립트 수정
+해당 문제를 해결하기 위해서 커스텀 스크립트 구현
 
 <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDXXnxs3Sal7Ahs1lgQq_d6L9CePGPlI33QmLtAWugjoDGw5a7FFR_7O1udcnXUD1skg6tkXDkvZUgCRgV87G9NPmBBeA=w1200-h876">
 
