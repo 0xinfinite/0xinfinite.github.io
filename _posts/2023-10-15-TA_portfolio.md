@@ -34,7 +34,7 @@ title: TA 포트폴리오
 
 ## 배경에 더 선명한 캐릭터 그림자 드리우기
 
-<img src="https://pbs.twimg.com/media/FOsiqh4aMAALqDn?format=png&name=small">
+<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaAD7h2XquHI3TPi3anFjdkMAXRyEDwWzWwTFTWq53mz0AOwD5kSjc3gB46gnwU8pOkR-6vL6BXztR-oMU4GQ3jwlZCZ=w1195-h833">
 
 [영상 출처](https://www.youtube.com/embed/4660-3DJydA?si=B8S5bSzeGk5Bes65&amp;start=17)
 
@@ -262,6 +262,7 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaA8RfmiPjAY_q8k0-4Vg6YpRgjK-rgkfUEoWSyWPgx_-ctwCqugeKDjnLWBTMuAZseS76gLoayODcWCb3-LBUbc_5qVsQ=w1200-h545">
 
+<img src ="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaCGNKWBaPRDZqR6LO80nJ2LvVGaQR65y1WwNWH7soxM64gaeA9xyxGAdMgCQNlCKD7eRGny00S7m9dulrT4zOXPxI2-hw=w1195-h502">
 　
 　
 ## Cast Shadow 제어하기
