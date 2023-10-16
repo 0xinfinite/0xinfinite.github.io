@@ -1,4 +1,4 @@
-![face normal before after](https://github.com/0xinfinite/0xinfinite.github.io/assets/33329495/4d04d7ba-55f0-4b3e-bfdd-e7ea3385a6a0)---
+---
 layout: post
 title: TA 포트폴리오
 ---
