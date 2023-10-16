@@ -36,7 +36,7 @@ title: TA 포트폴리오
 
 <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaAD7h2XquHI3TPi3anFjdkMAXRyEDwWzWwTFTWq53mz0AOwD5kSjc3gB46gnwU8pOkR-6vL6BXztR-oMU4GQ3jwlZCZ=w1195-h833">
 
-[영상 출처](https://www.youtube.com/embed/4660-3DJydA?si=B8S5bSzeGk5Bes65&amp;start=17)
+[이미지 출처 영상](https://www.youtube.com/embed/4660-3DJydA?si=B8S5bSzeGk5Bes65&amp;start=17)
 
 명일방주-엔드필드 시연 영상에서 영감을 얻어, 전체 그림자맵 용량을 아끼면서 캐릭터 그림자를 선명하게 띄우는 방법을 구상
 
@@ -183,10 +183,13 @@ title: TA 포트폴리오
 </div>
 </details>
 
-결과물 (일반 그림자맵 크기 512, 메인캐릭터용 뎁스맵 크기 256)
+결과물 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vKQiodIhNc0?si=t8qpaEOkf6poIMwN&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<img src="https://lh3.google.com/u/0/d/1RbOulTKyTbCy4nTS8A4p6fhT6ZLd8LlE=w957-h757-iv1">
 
+-일반 그림자맵 크기 512, 메인캐릭터용 뎁스맵 크기 256
+
+-맵크기는 줄이면서 오히려 그림자는 선명해지는 효과를 얻음
 
 
 
@@ -233,7 +236,7 @@ title: TA 포트폴리오
 
 엔진내장 Skinned Mesh Renderer와 Custom Skinned Mesh Renderer 비교
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HRp__ruzGXQ?si=CVPhCfFI02Pn4MAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<img src="https://lh3.google.com/u/0/d/1leiBKZMYtQ4bMb9oNkCKkqtPAKXC90_h=w957-h443-iv1">
 
 
 
@@ -258,7 +261,7 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaBUGrEcRGYyGG7LJUx2Gf-eRTRnNDhsNXK_JwE9YwMXMM76QSDRCwYsLEhONfV0EbgYv_WAFi1QbKegb4yRATqvHAjucA=w1101-h832">
 
-의도대로 외곽선이 마스킹 된 모습
+의도대로 외곽선이 마스킹 된 모습(상)과 마스킹 적용 전(하)
 
 <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaA8RfmiPjAY_q8k0-4Vg6YpRgjK-rgkfUEoWSyWPgx_-ctwCqugeKDjnLWBTMuAZseS76gLoayODcWCb3-LBUbc_5qVsQ=w1200-h545">
 
@@ -350,21 +353,21 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 상체(Spine)을 기준으로 상완이 위, 아래, 앞, 옆으로 향함에 따라 각각 특정한 회전값으로 보간됨.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FOwt6nhyBLk?si=7SCS7nW2h7zG5Joc&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<img src="https://lh3.google.com/u/0/d/1d8O6TcY81KvvtFInli6a2HZXtvZ1wOkd=w957-h443-iv1">
 
 
 ## 겨드랑이본
 
 상체(Spine)을 기준으로 상완이 앞, 옆으로 향함 따라 각각 특정한 회전값으로 보간됨.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R0mxcBDfpeA?si=rXoZePwY3h6CMStQ&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<img src="https://lh3.google.com/u/0/d/15NOzFDlsILi6uqP0FNT-MwCts8lGIxgN=w957-h443-iv1">
 
 
 ## 엉덩이 본
 
 하체(Pelvis)을 기준으로 허벅지가 위, 아래, 앞, 옆, 뒤로 향함에 따라 각각 특정한 회전값으로 보간됨.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3r_-p-pIkzQ?si=jLB9uV57aOFdTLkK&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<img src ="https://lh3.google.com/u/0/d/1d7whp6SBpiFACx7xjRYyBsRcmCEcyFZP=w957-h443-iv1">
 
 
 
@@ -446,19 +449,20 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 
 -이러한 세컨더리 본은 맥스, 블렌더 등의 툴에서 키 값을 구워와야 하며, 유니티에서 움직이면 작동하지 않음.
 
+<img src ="https://lh3.google.com/u/0/d/1hTtO9KkjuwMlP96YUkC0ZcTJTEa30kmb=w957-h443-iv1">
+
 -그래서 유니티에서도 세컨더리 본이 블렌더에서 처럼 작동할 수 있도록 유니티 스크립트를 구현
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/weaHy87mR-A?si=nsA5aeA3v9vhAais" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 매트릭스를 직접 계산하여 가상 부모 설정[(FlexibleTransform)](https://github.com/0xinfinite/ProjectProxy/blob/main/Assets/Scripts/Matrix/FlexibleTransformController.cs)
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/v-nE2aIyzr0?si=Dsv9ttr05F8y1DqT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<img src="https://lh3.google.com/u/0/d/15PcAC7n10NecumKR16382Fv_H0CUqb6I=w957-h443-iv1">
 
 
 [Secondary Bone Controller](https://github.com/0xinfinite/ProjectProxy/blob/main/Assets/Scripts/Rigging/SecondaryBones/SecondaryBoneController.cs/) 시연
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Vc3rkIDaVZI?si=FE-RySELTz8rCFXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<img src="https://lh3.google.com/u/0/d/1VgEmFLUXqDQs6lOu3KkMww7si-qPi2Ru=w957-h443-iv1">
 　
 　
  
