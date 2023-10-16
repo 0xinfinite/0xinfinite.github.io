@@ -90,7 +90,7 @@ title: TA 포트폴리오
 
     
 <details>
-	<summary>셰이더 메인 캐릭터 그림자 처리 부분</summary>
+	<summary>셰이더 메인 캐릭터 그림자 처리 부분(클릭 시 펼쳐집니다)</summary>
 	<div markdown="1">
 	
     	float4 ProjectUVFromWorldPos(float4x4 projection, float3 worldPos) {
@@ -195,6 +195,10 @@ title: TA 포트폴리오
 
  
 ## 얼굴 Normals 제어하기
+
+3D모델의 그림자는 버텍스에 주어지는 법선 벡터로 그려집니다. 그래서 만화적으로 간략화된 그림자가 나오도록 버텍스의 법선백터를 조정합니다.
+
+
 
 카툰렌더링에서 그림자를 만화적으로 지게 만들기 위해 노멀을 편집.
 
@@ -372,12 +376,16 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 <img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/shoulder_secondary.gif?raw=true">
 
 -윗팔본이 어느 각도냐에 따라서, 어깨본이 어떤각도가 되야 인체해부학에 맞고 보기 좋은지 수동으로 저장함.
+
 -애니메이터가 윗팔본을 움직일 때마다, 윗팔본의 각도를 감지함, 
+
 -위에서 감지된 각도에 따라 미리 저장해놓은 보기좋은 어깨본의 각도로 어깨본이 자동으로 움직임.
 
 ## 겨드랑이본
 
--어깨본과 같은 원리 입니다. 미리 윗팔본의 각도에 따라 보기좋은 겨드랑의 본의 각도를 저장합니다. 이후 윗팔본의 움직임에 따라 저장된 값으로 자동으로 움직입니다.
+-어깨본과 같은 원리 입니다. 미리 윗팔본의 각도에 따라 보기좋은 겨드랑의 본의 각도를 저장합니다. 
+
+이후 윗팔본의 움직임에 따라 저장된 값으로 자동으로 움직입니다.
 
 <img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/armpit.gif?raw=true">
 
@@ -398,7 +406,7 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 5. 기준값에 따라 세컨더리 본을 미리 저장해둔 각도로 회전
 
 <details>
-	<summary>파이썬 dot검출 스크립트 소스코드</summary>
+	<summary>파이썬 dot검출 스크립트 소스코드(클릭 시 펼쳐집니다)</summary>
 	<div markdown="1">
 	
 ```
@@ -478,8 +486,11 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 -애니메이션 키값을 맥스에서 구워오면 문제가 되지 않음.
 
 -그러나 애니메이터가 맥스에서 애니메이션을 잡는게 아니라, 유니티 엔진 에서 팔다리본의 움직임을 제어해야 할 경우에 세컨더리가 작동하지 않는 문제가 생김.
+
 ex) 모션캡쳐 장비에서 캐릭터의 움직임을 받아올 경우
+
 ex1) 계단 높낮이를 탐지하는 다리 IK
+
 ex2) 레그돌
 
 <img src ="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/not%20fuctional%20secondary.gif?raw=true">
