@@ -196,11 +196,13 @@ title: TA 포트폴리오
  
 ## 얼굴 Normals 제어하기
 
-3D모델의 그림자는 버텍스에 주어지는 법선 벡터로 그려집니다. 그래서 만화적으로 간략화된 그림자가 나오도록 버텍스의 법선백터를 조정합니다.
-
-
-
 카툰렌더링에서 그림자를 만화적으로 지게 만들기 위해 노멀을 편집.
+
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/normal%20work%203.png?raw=true">
+
+-3D모델의 그림자는 버텍스에 주어지는 법선 벡터로 그려집니다. 그래서 만화적으로 간략화된 그림자가 나오도록 버텍스의 법선백터를 조정합니다.
+
+-그래서 만화적으로 간략화된 그림자가 나오도록 버텍스의 법선백터를 조정합니다.
 
 <img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/face%20normal%20before%20after.png?raw=true">
 
