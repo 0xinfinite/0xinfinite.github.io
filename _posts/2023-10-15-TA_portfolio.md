@@ -506,7 +506,7 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 　
 # 언리얼 엔진
 
-<img src="<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/unreal.png?raw=true">">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/unreal.png?raw=true">
 
 최근 언리얼5를 이용하여 제작한 스크린 사격장 게임 "마스터 헌터"프로젝트에 참여했습니다.
 
