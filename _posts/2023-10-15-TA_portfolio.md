@@ -185,7 +185,7 @@ title: TA 포트폴리오
 
 결과물 
 
-<img src="https://lh3.google.com/u/0/d/1RbOulTKyTbCy4nTS8A4p6fhT6ZLd8LlE=w957-h757-iv1">
+<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDW1DKARUJJJs8ZjZJDxkI2W0_cX_gwVPAUcJt8Cio5rnzHKTCX5IqCi1h4ZsEpoV-WOPbsRNH0gJC_7oPoCquesopR=w1195-h502">
 
 -일반 그림자맵 크기 512, 메인캐릭터용 뎁스맵 크기 256
 
@@ -270,11 +270,23 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 　
 ## Cast Shadow 제어하기
 
-얼굴에 Cast Shadow를 허용한 모습
+-라이팅에 의해 생기는 그림자는 현재
+  
+  a) 버텍스 노멀에 의해서 생성되는 lit 그림자
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDlrfpBH0qrZo3Ro0mAkeHVDWTQlFNua-vUmf4wNXfnxjXvST_vYpAEw_SghASrCA9dR6yS86WdujmOBSc1QHDVVw_ZHQ=w1101-h832">
+  b) 앞의 물체가 햇빛을 가려서 다른물체에 드리우는 cast shadow
 
--만화적인 그림자 표현을 위하여, 코의 입체로 인하여 얼굴에 드리우는 그림자를 없애기.
+두 종류 입니다.
+
+<img src="https://lh3.google.com/u/0/d/1fE4OZjIXLtV88VpLpC8LrA6FkCSJYEPB=w1195-h502-iv1">
+
+이미지 출처: https://myranaito.medium.com/how-to-shade-d7d42b55caa5
+
+<img src="https://lh3.google.com/u/0/d/1fj9F1feC2xIBxtb940SkWmVXhPo4OlYb=w1195-h502-iv1">
+
+얼굴에 cast shadow를 적용하게 되면 코나 입술에 의해서 만화적인 느낌을 해치는 그림자가 드리우게 됩니다.
+
+<img src="https://lh3.google.com/u/0/d/1ouBgDTbbOOJnl5I3EKlzx4NSrB46XvHc=w1195-h833-iv1">
 
 -RealtimeLights.hlsl를 수정하여 shadowCoord.z값을 offset만큼 가산, 얼굴 면의 그림자공간 위치 값을 머리카락과 콧날보다 앞에 오게 함
 
