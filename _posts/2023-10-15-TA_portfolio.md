@@ -267,9 +267,9 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 <img src ="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaCGNKWBaPRDZqR6LO80nJ2LvVGaQR65y1WwNWH7soxM64gaeA9xyxGAdMgCQNlCKD7eRGny00S7m9dulrT4zOXPxI2-hw=w1195-h502">
 　
-　
-## Cast Shadow 제어하기
 
+ 
+## Cast Shadow 제어하기
 
 
 -라이팅에 의해 생기는 그림자는 현재
