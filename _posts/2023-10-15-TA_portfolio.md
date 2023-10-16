@@ -185,7 +185,7 @@ title: TA 포트폴리오
 
 결과물 
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDW1DKARUJJJs8ZjZJDxkI2W0_cX_gwVPAUcJt8Cio5rnzHKTCX5IqCi1h4ZsEpoV-WOPbsRNH0gJC_7oPoCquesopR=w1195-h502">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/main%20character%20shadow.gif?raw=true">
 
 -일반 그림자맵 크기 512, 메인캐릭터용 뎁스맵 크기 256
 
