@@ -348,16 +348,21 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 ## 어깨본
 
+상체(Spine)을 기준으로 상완이 위, 아래, 앞, 옆으로 향함에 따라 각각 특정한 회전값으로 보간됨.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FOwt6nhyBLk?si=7SCS7nW2h7zG5Joc&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
-
 ## 겨드랑이본
+
+상체(Spine)을 기준으로 상완이 앞, 옆으로 향함 따라 각각 특정한 회전값으로 보간됨.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/R0mxcBDfpeA?si=rXoZePwY3h6CMStQ&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 ## 엉덩이 본
+
+하체(Pelvis)을 기준으로 허벅지가 위, 아래, 앞, 옆, 뒤로 향함에 따라 각각 특정한 회전값으로 보간됨.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3r_-p-pIkzQ?si=jLB9uV57aOFdTLkK&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
