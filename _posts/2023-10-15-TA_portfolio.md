@@ -34,7 +34,7 @@ title: TA 포트폴리오
 
 ## 배경에 더 선명한 캐릭터 그림자 드리우기
 
-![image]("img/arknight example.png")
+![image](./img/arknight example.png)
 
 [이미지 출처 영상](https://www.youtube.com/embed/4660-3DJydA?si=B8S5bSzeGk5Bes65&amp;start=17)
 
