@@ -40,7 +40,7 @@ title: TA 포트폴리오
 
 명일방주-엔드필드 시연 영상에서 영감을 얻어, 전체 그림자맵 용량을 아끼면서 캐릭터 그림자를 선명하게 띄우는 방법을 구상
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaCarlfJ2GyWcFveFYjbiuhVE9QyIMg0N-781wrTuXDsXPquPSr3YrQTJZOqVQCth2ZZ7SgjE7Wfcme84WH57LgAbF-AjQ=w970-h529">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/how%20to%20render%20main%20character%20shadow.png?raw=true">
 
 그림자맵은 카메라로 렌더한다는 것에 착안, 메인 캐릭터 위에 직선광과 똑같은 각도의 Orthographic 카메라를 배치
 
@@ -198,16 +198,16 @@ title: TA 포트폴리오
 
 카툰렌더링에서 그림자를 만화적으로 지게 만들기 위해 노말을 편집.
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDlPmmMBBMrDhl4_KtzncQrIEDZZAL6j8OG8AdzmHwA-38LkURH-21n5lLm_itRd6W1yYJ67Wq-gPl_f1vrT9z45AB6Sg=w1200-h876">
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaAGD3N8o7IadLZcPcp1AQGqxPvnJ019IUHTGJaDjUuE8viHr0F9TRaJWXQNz2CRV6HbmvwGqDFMPqMHIlcz7ERoWTdJ6Q=w1200-h876">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/normal1.png?raw=true">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/normal2.png?raw=true">
 
 노멀이 편집된 상태에서 표정 애니메이션을 주니 노멀이 다시 계산되어 망가지는 문제 발생.
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaA7axUWnNAxiz3CTYkPsIZoVz7oo7KGZx5uOhu1kI99vngh9ey9eXzGhzEICVRwoslaFMUl3MvzqqtgyziyHB-R1eBG=w1200-h876">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/normal3.png?raw=true">
 
 해당 문제를 해결하기 위해서 커스텀 스크립트 구현
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDXXnxs3Sal7Ahs1lgQq_d6L9CePGPlI33QmLtAWugjoDGw5a7FFR_7O1udcnXUD1skg6tkXDkvZUgCRgV87G9NPmBBeA=w1200-h876">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/normal4.png?raw=true">
 
 위 작업에 사용된 Custom Skinned Mesh Renderer 스크립트
 
@@ -259,13 +259,13 @@ B채널 : G채널 마스킹 전용 면(ColorMask 0, 최종 카메라에 렌더�
 G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaBUGrEcRGYyGG7LJUx2Gf-eRTRnNDhsNXK_JwE9YwMXMM76QSDRCwYsLEhONfV0EbgYv_WAFi1QbKegb4yRATqvHAjucA=w1101-h832">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/vertex painting.png?raw=true">
 
-의도대로 외곽선이 마스킹 된 모습(상)과 마스킹 적용 전(하)
+마스킹 적용 전(상)과 의도대로 외곽선이 마스킹 된 모습(하)
 
 <img src="">
 
-<img src ="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaCGNKWBaPRDZqR6LO80nJ2LvVGaQR65y1WwNWH7soxM64gaeA9xyxGAdMgCQNlCKD7eRGny00S7m9dulrT4zOXPxI2-hw=w1195-h502">
+<img src ="<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/outline before after.png?raw=true">">
 　
 
  
@@ -349,7 +349,7 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 적용 전과 적용 후 비교
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDDiPJyaxarZQZT7UKAauosepef4nGj2NLnssrMRXTiL1wUvQcOH8lLQWd_-SzL3-ByKErCuH4gv7ozwR_i1MpqRL5T=w1101-h832">
+<img src="<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/eyebrow.png?raw=true">">
 
 
 　
@@ -454,7 +454,7 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 
 3DS MAX, 마야 에서도 동일한 구현이 가능합니다.
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaA5aS9ZyGNiigBIIqMeLGf916RA1C4wzNEsaUgHjJ4vm8B0AGULWBk1vjNdhX3vAQZB198eCgLGamEuP_Gh1ZmSHBLhqA=w1200-h876">
+<img src="<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/maya node.png?raw=true">">
 
 
 　
@@ -507,7 +507,7 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 　
 # 언리얼 엔진
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaBi8iMovKv5Pyq0mBpHfnjJGPI0dTSft54h62qcvTJqNRz8elP9OyTHpQtRpMBqA_WZFdPmQ3u8KWdNnFs_JwvszUR-cw=w1200-h809">
+<img src="<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/unreal.png?raw=true">">
 
 최근 언리얼5를 이용하여 제작한 스크린 사격장 게임 "마스터 헌터"프로젝트에 참여했습니다.
 
