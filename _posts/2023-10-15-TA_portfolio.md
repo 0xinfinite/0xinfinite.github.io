@@ -196,7 +196,7 @@ title: TA 포트폴리오
  
 ## 얼굴 Normals 제어하기
 
-카툰렌더링에서 그림자를 만화적으로 지게 만들기 위해 노말을 편집.
+카툰렌더링에서 그림자를 만화적으로 지게 만들기 위해 노멀을 편집.
 
 <img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/face%20normal%20before%20after.png?raw=true">
 
@@ -228,7 +228,7 @@ title: TA 포트폴리오
                     
                 float weight = (blendshapeWeights[i] + (i == blendshapeWeights.Length - 1 ? -1 : 0));
                 vertices[j] += deltaVertices[j] * weight; 
-                //normals[j] += deltaNormals[j] * weight;    // 원본 매시의 노말을 유지하기 위해 블랜드셰이프의 노말 계산을 비활성화
+                //normals[j] += deltaNormals[j] * weight;    // 원본 매시의 노멀을 유지하기 위해 블랜드셰이프의 노멀 계산을 비활성화
             }
         }
 	...
@@ -318,7 +318,7 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 ## 머리카락보다 앞에 있는 눈썹
 
-눈썹의 버텍스 월드위치를 카메라 방향으로 앞으로 당겨서 머리카락 위에다 놓기
+눈썹이 머리카락보다 위에 오는 만화적 표현을 위해, 눈썹의 버텍스 월드위치를 카메라 방향으로 앞으로 당기기.
 
 <img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/eyebrow.png?raw=true">
 
@@ -364,35 +364,41 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 3DS MAX, 마야 에서도 동일한 구현이 가능합니다.
 
 
+   
 ## 어깨본
 
-상체(Spine)을 기준으로 상완이 위, 아래, 앞, 옆으로 향함에 따라 각각 특정한 회전값으로 보간됨.
+-사람이 팔을 위로 들면 해부학적으로 어깨는 뒤로 젖혀지게 됩니다. 그래서 팔을 위로 들면 어깨본이 뒤로 젖혀지도록 스크립트로 구현했습니다.
 
 <img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/shoulder_secondary.gif?raw=true">
 
-## 공통 원리
-
-1. 각 부모 본(Spine 혹은 Pelvis)과 수족 본(팔, 다리)의 쿼터니언에서 방향 벡터를 추출
-2. 두 방향 벡터를 dot()계산하여 팔 다리가 어디로 뻗어있는지를 검출 (예:팔이 위로 뻗어있으면 up방향의 dot이 1, forward방향의 dot이 0이 됨)
-3. dot()의 출력값을 드라이버로 하여, 정해진 회전값으로 세컨더리 본 회전 보간
+-윗팔본이 어느 각도냐에 따라서, 어깨본이 어떤각도가 되야 인체해부학에 맞고 보기 좋은지 수동으로 저장함.
+-애니메이터가 윗팔본을 움직일 때마다, 윗팔본의 각도를 감지함, 
+-위에서 감지된 각도에 따라 미리 저장해놓은 보기좋은 어깨본의 각도로 어깨본이 자동으로 움직임.
 
 ## 겨드랑이본
 
-상체(Spine)을 기준으로 상완이 앞, 옆으로 향함 따라 각각 특정한 회전값으로 보간됨.
+-어깨본과 같은 원리 입니다. 미리 윗팔본의 각도에 따라 보기좋은 겨드랑의 본의 각도를 저장합니다. 이후 윗팔본의 움직임에 따라 저장된 값으로 자동으로 움직입니다.
 
 <img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/armpit.gif?raw=true">
 
 
 ## 엉덩이 본
 
-하체(Pelvis)을 기준으로 허벅지가 위, 아래, 앞, 옆, 뒤로 향함에 따라 각각 특정한 회전값으로 보간됨.
+-어깨본, 겨드랑이본과 같은 원리이지만, 윗팔본 대신 허벅지본을 기준으로 움직입니다.
 
 <img src ="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/hip.gif?raw=true">
 
 
+## 계산식
+
+1. 팔의 각도에 따라서 보기좋은 세컨더리본의 각도를 수동으로 지정해둠.
+2. 각 부모 본(Spine 혹은 Pelvis)과 수족 본(팔, 다리)의 쿼터니언에서 방향 벡터를 추출
+3. 두 방향 벡터를 dot()계산하여 팔 다리가 어디로 뻗어있는지를 검출 (예:팔이 위로 뻗어있으면 up방향의 dot이 1, forward방향의 dot이 0이 됨)
+4. dot()과 맞춤 수식의 출력값을 기준값으로 결정
+5. 기준값에 따라 세컨더리 본을 미리 저장해둔 각도로 회전
 
 <details>
-	<summary>파이썬 스크립트 소스코드</summary>
+	<summary>파이썬 dot검출 스크립트 소스코드</summary>
 	<div markdown="1">
 	
 ```
@@ -468,6 +474,13 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 ## 게임엔진에서 세컨더리 본 제어
 
 -이러한 세컨더리 본은 맥스, 블렌더 등의 툴에서 키 값을 구워와야 하며, 유니티에서 움직이면 작동하지 않음.
+
+-애니메이션 키값을 맥스에서 구워오면 문제가 되지 않음.
+
+-그러나 애니메이터가 맥스에서 애니메이션을 잡는게 아니라, 유니티 엔진 에서 팔다리본의 움직임을 제어해야 할 경우에 세컨더리가 작동하지 않는 문제가 생김.
+ex) 모션캡쳐 장비에서 캐릭터의 움직임을 받아올 경우
+ex1) 계단 높낮이를 탐지하는 다리 IK
+ex2) 레그돌
 
 <img src ="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/not%20fuctional%20secondary.gif?raw=true">
 
