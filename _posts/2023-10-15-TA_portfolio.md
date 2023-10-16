@@ -34,7 +34,7 @@ title: TA 포트폴리오
 
 ## 배경에 더 선명한 캐릭터 그림자 드리우기
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaAD7h2XquHI3TPi3anFjdkMAXRyEDwWzWwTFTWq53mz0AOwD5kSjc3gB46gnwU8pOkR-6vL6BXztR-oMU4GQ3jwlZCZ=w1195-h833">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/arknight%20example.png?raw=true">
 
 [이미지 출처 영상](https://www.youtube.com/embed/4660-3DJydA?si=B8S5bSzeGk5Bes65&amp;start=17)
 
@@ -185,7 +185,7 @@ title: TA 포트폴리오
 
 결과물 
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaDW1DKARUJJJs8ZjZJDxkI2W0_cX_gwVPAUcJt8Cio5rnzHKTCX5IqCi1h4ZsEpoV-WOPbsRNH0gJC_7oPoCquesopR=w1195-h502">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/main%20character%20shadow.gif?raw=true">
 
 -일반 그림자맵 크기 512, 메인캐릭터용 뎁스맵 크기 256
 
@@ -236,7 +236,7 @@ title: TA 포트폴리오
 
 엔진내장 Skinned Mesh Renderer와 Custom Skinned Mesh Renderer 비교
 
-<img src="https://lh3.google.com/u/0/d/1leiBKZMYtQ4bMb9oNkCKkqtPAKXC90_h=w957-h443-iv1">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/custom%20skinned%20mesh%20renderer%20demo.gif?raw=true">
 
 
 
@@ -246,7 +246,7 @@ title: TA 포트폴리오
 
 표정 변화를 위해 버텍스 애니메이션을 주니, 메쉬가 접히면서 쓸모없는 외곽선이 생겼습니다.
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaAqboqcDnysQA3KA2kdk9BnnL0-NUqWcIWPJeVtg9Kkz4jAX90x_9QfI4uxfewHmijAi-a4GNwvCUJG8ZGTu1ELUuOncQ=w1184-h774">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/outline%20compare.png?raw=true">
 
 셰이더와 스탠실로 지워보겠습니다.
 
@@ -263,7 +263,7 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 의도대로 외곽선이 마스킹 된 모습(상)과 마스킹 적용 전(하)
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaA8RfmiPjAY_q8k0-4Vg6YpRgjK-rgkfUEoWSyWPgx_-ctwCqugeKDjnLWBTMuAZseS76gLoayODcWCb3-LBUbc_5qVsQ=w1200-h545">
+<img src="">
 
 <img src ="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaCGNKWBaPRDZqR6LO80nJ2LvVGaQR65y1WwNWH7soxM64gaeA9xyxGAdMgCQNlCKD7eRGny00S7m9dulrT4zOXPxI2-hw=w1195-h502">
 　
@@ -280,15 +280,15 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 두 종류 입니다.
 
-<img src="https://lh3.google.com/u/0/d/1fE4OZjIXLtV88VpLpC8LrA6FkCSJYEPB=w1195-h502-iv1">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/shadow%20explain.png?raw=true">
 
 이미지 출처: https://myranaito.medium.com/how-to-shade-d7d42b55caa5
 
-<img src="https://lh3.google.com/u/0/d/1fj9F1feC2xIBxtb940SkWmVXhPo4OlYb=w1195-h502-iv1">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/wanna%20do%20with%20shadow.png?raw=true">
 
 얼굴에 cast shadow를 적용하게 되면 코나 입술에 의해서 만화적인 느낌을 해치는 그림자가 드리우게 됩니다.
 
-<img src="https://lh3.google.com/u/0/d/1ouBgDTbbOOJnl5I3EKlzx4NSrB46XvHc=w1195-h833-iv1">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/cast%20shadow%20topic.png?raw=true">
 
 -RealtimeLights.hlsl를 수정하여 shadowCoord.z값을 offset만큼 가산, 얼굴 면의 그림자공간 위치 값을 머리카락과 콧날보다 앞에 오게 함
 
@@ -310,7 +310,7 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 얼굴 그림자를 의도대로 제어하면서 Cast Shadow 양립
 
-<img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaD8-DaGQWyuEtHIEkS08Z_aDZmCzQnR1Wk6FHluqDk5PB72Mz9eNDlqYPvr8HyCR-bAAe7vJXWa2SNCwd5FCdKwt75uGw=w1101-h832">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/controlling%20cast%20shadow.gif?raw=true">
 
 
 
@@ -367,21 +367,21 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 상체(Spine)을 기준으로 상완이 위, 아래, 앞, 옆으로 향함에 따라 각각 특정한 회전값으로 보간됨.
 
-<img src="https://lh3.google.com/u/0/d/1d8O6TcY81KvvtFInli6a2HZXtvZ1wOkd=w957-h443-iv1">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/shoulder_secondary.gif?raw=true">
 
 
 ## 겨드랑이본
 
 상체(Spine)을 기준으로 상완이 앞, 옆으로 향함 따라 각각 특정한 회전값으로 보간됨.
 
-<img src="https://lh3.google.com/u/0/d/15NOzFDlsILi6uqP0FNT-MwCts8lGIxgN=w957-h443-iv1">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/armpit.gif?raw=true">
 
 
 ## 엉덩이 본
 
 하체(Pelvis)을 기준으로 허벅지가 위, 아래, 앞, 옆, 뒤로 향함에 따라 각각 특정한 회전값으로 보간됨.
 
-<img src ="https://lh3.google.com/u/0/d/1d7whp6SBpiFACx7xjRYyBsRcmCEcyFZP=w957-h443-iv1">
+<img src ="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/hip.gif?raw=true">
 
 
 
@@ -463,7 +463,7 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 
 -이러한 세컨더리 본은 맥스, 블렌더 등의 툴에서 키 값을 구워와야 하며, 유니티에서 움직이면 작동하지 않음.
 
-<img src ="https://lh3.google.com/u/0/d/1hTtO9KkjuwMlP96YUkC0ZcTJTEa30kmb=w957-h443-iv1">
+<img src ="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/not%20fuctional%20secondary.gif?raw=true">
 
 -그래서 유니티에서도 세컨더리 본이 블렌더에서 처럼 작동할 수 있도록 유니티 스크립트를 구현
 
@@ -471,12 +471,12 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 매트릭스를 직접 계산하여 가상 부모 설정[(FlexibleTransform)](https://github.com/0xinfinite/ProjectProxy/blob/main/Assets/Scripts/Matrix/FlexibleTransformController.cs)
 
 
-<img src="https://lh3.google.com/u/0/d/15PcAC7n10NecumKR16382Fv_H0CUqb6I=w957-h443-iv1">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/flexible%20transform.gif?raw=true">
 
 
 [Secondary Bone Controller](https://github.com/0xinfinite/ProjectProxy/blob/main/Assets/Scripts/Rigging/SecondaryBones/SecondaryBoneController.cs/) 시연
 
-<img src="https://lh3.google.com/u/0/d/1VgEmFLUXqDQs6lOu3KkMww7si-qPi2Ru=w957-h443-iv1">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/unity%20secondary%20bone.gif?raw=true">
 　
 　
  
