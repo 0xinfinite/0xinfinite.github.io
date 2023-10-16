@@ -348,7 +348,7 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 적용 전과 적용 후 비교
 
-<img src="<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/eyebrow.png?raw=true">">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/eyebrow.png?raw=true">
 
 
 　
@@ -453,7 +453,7 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 
 3DS MAX, 마야 에서도 동일한 구현이 가능합니다.
 
-<img src="<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/maya node.png?raw=true">">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/maya node.png?raw=true">
 
 
 　
