@@ -264,7 +264,7 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 마스킹 적용 전(상)과 의도대로 외곽선이 마스킹 된 모습(하)
 
-<img src ="<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/outline before after.png?raw=true">">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/outline before after.png?raw=true">
 　
 
  
