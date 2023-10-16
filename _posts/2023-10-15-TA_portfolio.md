@@ -321,6 +321,11 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 눈썹의 버텍스 월드위치를 카메라 방향으로 앞으로 당겨서 머리카락 위에다 놓기
 
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/eyebrow.png?raw=true">
+
+적용된 셰이더 코드
+
+
 	VertexPositionInputs GetVertexPositionInputs(float3 positionOS, float _depthForward)
 	{
 	    VertexPositionInputs input;
@@ -346,10 +351,6 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 		...
 	}
 
-적용 전과 적용 후 비교
-
-<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/eyebrow.png?raw=true">
-
 
 　
 
@@ -361,6 +362,8 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 팔다리 움직임을 감지해서 자동으로 움직이는 보조 본을 파이썬 스크립트로 구현해봤습니다.
 
+3DS MAX, 마야 에서도 동일한 구현이 가능합니다.
+
 
 ## 어깨본
 
@@ -368,6 +371,11 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 <img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/shoulder_secondary.gif?raw=true">
 
+## 공통 원리
+
+1. 각 부모 본(Spine 혹은 Pelvis)과 수족 본(팔, 다리)의 쿼터니언에서 방향 벡터를 추출
+2. 두 방향 벡터를 dot()계산하여 팔 다리가 어디로 뻗어있는지를 검출 (예:팔이 위로 뻗어있으면 up방향의 dot이 1, forward방향의 dot이 0이 됨)
+3. dot()의 출력값을 드라이버로 하여, 정해진 회전값으로 세컨더리 본 회전 보간
 
 ## 겨드랑이본
 
@@ -451,7 +459,7 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 
 
 
-3DS MAX, 마야 에서도 동일한 구현이 가능합니다.
+동일한 기능을 마야에서 구현한 노드입니다.
 
 <img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/maya node.png?raw=true">
 
@@ -494,7 +502,7 @@ def left_angle(traj_bone,pose_bone,parent_bone):
 
 <iframe width="338" height="600" src="https://www.youtube.com/embed/UqCAhVqLBXc?si=rnOf3dps_wlWSkei&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-리터칭 이미지를 보며 직접 작업한 캐릭터 모델링 입니다. 모델링은 학원에서 공부하였습니다.
+리터칭 이미지를 직접 모델링 한 뒤, 리깅과 애니메이션까지 진행한 작업물입니다
 
 유니티에 올린 모습입니다.
 
