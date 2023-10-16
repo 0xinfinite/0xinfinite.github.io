@@ -1,4 +1,4 @@
----
+![face normal before after](https://github.com/0xinfinite/0xinfinite.github.io/assets/33329495/4d04d7ba-55f0-4b3e-bfdd-e7ea3385a6a0)---
 layout: post
 title: TA 포트폴리오
 ---
@@ -198,8 +198,7 @@ title: TA 포트폴리오
 
 카툰렌더링에서 그림자를 만화적으로 지게 만들기 위해 노말을 편집.
 
-<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/normal1.png?raw=true">
-<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/normal2.png?raw=true">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/face%20normal%20before%20after.png?raw=true">
 
 노멀이 편집된 상태에서 표정 애니메이션을 주니 노멀이 다시 계산되어 망가지는 문제 발생.
 
@@ -236,7 +235,7 @@ title: TA 포트폴리오
 
 엔진내장 Skinned Mesh Renderer와 Custom Skinned Mesh Renderer 비교
 
-<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/custom%20skinned%20mesh%20renderer%20demo.gif?raw=true">
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/facial%20normal%20compare.gif?raw=true">
 
 
 
