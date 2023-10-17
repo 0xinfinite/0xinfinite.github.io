@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TA 포트폴리오
+title: 강주성 TA 포트폴리오
 ---
 ## 목차
 
