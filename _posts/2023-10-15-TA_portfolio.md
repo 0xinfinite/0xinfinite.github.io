@@ -294,23 +294,26 @@ G채널 : B채널에 의해 마스킹 된 외곽선 렌더(얼굴외곽)
 
 <img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/cast%20shadow%20topic.png?raw=true">
 
--RealtimeLights.hlsl를 수정하여 shadowCoord.z값을 offset만큼 가산, 얼굴 면의 그림자공간 위치 값을 머리카락과 콧날보다 앞에 오게 함
+-RealtimeLights.hlsl를 수정. shadowCoord를 GetMainLight()안에서 계산하여, 얼굴 면의 그림자공간 위치 값을 머리카락과 콧날보다 앞에 오게 함
 
-	Light GetMainLight(float4 shadowCoord, float3 positionWS, half4 shadowMask, float shadowCastOffset)
-	{
-	    Light light = GetMainLight();
+    Light GetMainLight(float3 positionWS, half4 shadowMask, float shadowCastOffset)
+    {
+        Light light = GetMainLight();
+    
+        float3 virtualWorldPos = positionWS + (light.direction * shadowCastOffset);
+    
+        float4 shadowCoord = TransformWorldToShadowCoord(virtualWorldPos);
+    
+        light.shadowAttenuation = MainLightShadow(shadowCoord, positionWS, shadowMask, _MainLightOcclusionProbes);
+    
+        #if defined(_LIGHT_COOKIES)
+            real3 cookieColor = SampleMainLightCookie(positionWS);
+            light.color *= cookieColor;
+        #endif
+    
+        return light;
+    }
 
-	    shadowCoord.z += shadowCastOffset;
-
-	    light.shadowAttenuation = MainLightShadow(shadowCoord, positionWS, shadowMask, _MainLightOcclusionProbes);
-
-	    #if defined(_LIGHT_COOKIES)
-	        real3 cookieColor = SampleMainLightCookie(positionWS);
-	        light.color *= cookieColor;
-	    #endif
-
-	    return light;
-	}
 
 얼굴 그림자를 의도대로 제어하면서 Cast Shadow 양립
 
