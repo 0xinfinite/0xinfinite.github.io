@@ -243,6 +243,10 @@ title: 강주성 TA 포트폴리오
 
 <img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/facial%20normal%20compare.gif?raw=true">
 
+더 나아가 Job System+Burst Compile로 스크립트를 멀티스레드 상에서 기동시켜 최적화를 진행하였습니다.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Jqh19h7k2AM?si=Q8B78PZmN3B9D70M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 
 　
