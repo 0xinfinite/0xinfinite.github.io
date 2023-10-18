@@ -528,7 +528,7 @@ ex2) 레그돌
 
 지인이 리터칭해 준 디자인 입니다. 치마를 배까지 올려입는 의상으로 리메이크 해보고 싶어서 부탁드렸습니다.
 
-<iframe width="338" height="600" src="https://www.youtube.com/embed/UqCAhVqLBXc?si=rnOf3dps_wlWSkei&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="338" height="600" src="https://www.youtube.com/embed/JqNOw2amiV0?si=dryFPKsyp-Tpg_dZ&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 리터칭 이미지를 직접 모델링 한 뒤, 리깅과 애니메이션까지 진행한 작업물입니다
 
