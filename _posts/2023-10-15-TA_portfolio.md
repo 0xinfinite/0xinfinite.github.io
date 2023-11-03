@@ -243,6 +243,10 @@ title: 강주성 TA 포트폴리오
 
 <img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/facial%20normal%20compare.gif?raw=true">
 
+더 나아가 Job System+Burst Compile로 스크립트를 멀티스레드 상에서 기동시켜 최적화를 진행하였습니다.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Jqh19h7k2AM?si=Q8B78PZmN3B9D70M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 
 　
@@ -528,7 +532,7 @@ ex2) 레그돌
 
 지인이 리터칭해 준 디자인 입니다. 치마를 배까지 올려입는 의상으로 리메이크 해보고 싶어서 부탁드렸습니다.
 
-<iframe width="338" height="600" src="https://www.youtube.com/embed/UqCAhVqLBXc?si=rnOf3dps_wlWSkei&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="338" height="600" src="https://www.youtube.com/embed/JqNOw2amiV0?si=dryFPKsyp-Tpg_dZ&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 리터칭 이미지를 직접 모델링 한 뒤, 리깅과 애니메이션까지 진행한 작업물입니다
 
