@@ -8,8 +8,6 @@ title: 강주성 TA 포트폴리오
 
 [메인캐릭터 그림자](#배경에-더-선명한-캐릭터-그림자-드리우기)
 
-[2D 머리카락 그림자](#2D-머리카락-그림자)
-
 [노멀편집](#얼굴-normals-제어하기)
 
 [외곽선 제어](#얼굴-안쪽의-외곽선-마스킹)
@@ -24,7 +22,11 @@ title: 강주성 TA 포트폴리오
 
 [유니티 세컨더리본](#게임엔진에서-세컨더리-본-제어)
 
-3) [모델링](#모델링)
+3) [사용자정의 URP](#사용자정의-URP)
+
+[2D 머리카락 그림자](#2D-머리카락-그림자)
+
+4) [모델링](#모델링)
 
 모치다 아리사 작업물
 
@@ -192,15 +194,6 @@ title: 강주성 TA 포트폴리오
 -일반 그림자맵 크기 512, 메인캐릭터용 뎁스맵 크기 256
 
 -맵크기는 줄이면서 오히려 그림자는 선명해지는 효과를 얻음
-
-
-## 2D 머리카락 그림자
-
-<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/2d-hair-shadow.png?raw=true">
-
-<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/2d-hair-shadow-move.gif?raw=true">
-
-일반 직선광으로는 재현하기 힘든 2D 머리카락 그림자
 
  
 ## 얼굴 Normals 제어하기
@@ -536,6 +529,14 @@ URP 14.0.8 패키지를 포크하여 사용자정의 파이프라인을 제작�
 
 [https://github.com/0xinfinite/Unity-Universal-RP](https://github.com/0xinfinite/Unity-Universal-RP) 에서 계속 업데이트 중입니다.
  
+
+## 2D 머리카락 그림자
+
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/2d-hair-shadow.png?raw=true">
+
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/2d-hair-shadow-move.gif?raw=true">
+
+일반 직선광으로는 재현하기 힘든 2D 머리카락 그림자를 전용 렌더러피쳐로 구현
  
  
 # 모델링
