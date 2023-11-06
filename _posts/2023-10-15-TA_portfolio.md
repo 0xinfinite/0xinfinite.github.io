@@ -8,6 +8,8 @@ title: 강주성 TA 포트폴리오
 
 [메인캐릭터 그림자](#배경에-더-선명한-캐릭터-그림자-드리우기)
 
+[2D 머리카락 그림자](#2D-머리카락-그림자)
+
 [노멀편집](#얼굴-normals-제어하기)
 
 [외곽선 제어](#얼굴-안쪽의-외곽선-마스킹)
@@ -192,6 +194,13 @@ title: 강주성 TA 포트폴리오
 -맵크기는 줄이면서 오히려 그림자는 선명해지는 효과를 얻음
 
 
+## 2D 머리카락 그림자
+
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/2d-hair-shadow.png?raw=true">
+
+<img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/2d-hair-shadow-move.gif?raw=true">
+
+일반 직선광으로는 재현하기 힘든 2D 머리카락 그림자
 
  
 ## 얼굴 Normals 제어하기
