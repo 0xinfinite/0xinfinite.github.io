@@ -26,6 +26,8 @@ title: 강주성 TA 포트폴리오
 
 [2D 머리카락 그림자](#2D-머리카락-그림자)
 
+[안드로이드 테스트](#안드로이드-테스트)
+
 4) [모델링](#모델링)
 
 모치다 아리사 작업물
@@ -537,6 +539,15 @@ URP 14.0.8 패키지를 포크하여 사용자정의 파이프라인을 제작�
 <img src="https://github.com/0xinfinite/0xinfinite.github.io/blob/master/img/2d-hair-shadow-move.gif?raw=true">
 
 일반 직선광으로는 재현하기 힘든 2D 머리카락 그림자를 전용 렌더러피쳐로 구현
+
+
+## 안드로이드 테스트
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kwWVc1ryGLs?si=qsOO6tYRzaSjJ8Yr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+테스트 기기 : 삼성 Galaxy S8+
+
+적용 설정 : 디퍼드 렌더링, 커스텀 셰도우 2개(전신, 2D 머리카락)
  
  
 # 모델링
